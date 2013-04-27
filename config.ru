@@ -1,3 +1,4 @@
-require 'locomotive/wagon/standalone_server'
+# This file is used by Rack-based servers to start the application.
 
-run Locomotive::Wagon::StandaloneServer.new(File.expand_path('.'))
+require ::File.expand_path('../config/environment',  __FILE__)
+run Madmutt::Application
